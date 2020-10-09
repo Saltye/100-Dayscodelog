@@ -1,0 +1,54 @@
+You have now been introduced to the fundamental Git workflow. You learned a lot! Let’s take a moment to generalize:
+
+    Git is the industry-standard version control system for web developers
+    Use Git commands to help keep track of changes made to a project:
+        mkdir practice
+        git init creates a new Git repository
+        git status inspects the contents of the working directory and staging area
+        git add adds files from the working directory to the staging area
+        git diff shows the difference between the working directory and the staging area
+        git commit -m "message" permanently stores file changes from the staging area in the repository
+        git log shows a list of all previous commits
+        git remote add origin https://xxx
+        git push -U origin master
+
+        Checking the Status of a Git Repository
+
+The git status command is used within a Git repository to its current status including the current commit, any modified files, and any new files not being tracked by Git.
+
+The output of git status can vary widely, and it often includes helpful messages to direct the user to manage their repository. For example, git status will show the user the files they would commit by running git commit and the files they could commit by running git add before running git commit.
+Initializing a Git Repository
+
+The git init command creates or initializes a new Git project, or repository. It creates a .git folder with all the tools and data necessary to maintain versions. This command only needs to be used once per project to complete the initial setup. For instance, the code block sets up the home folder as a new git repository.
+
+$ cd /home
+$ git init
+
+Your First Remote Repository on GitHub
+
+Finally, we’ll create a repository on GitHub and then link it to a local repository on your computer. This allows you to backup your work constantly and safely, so you never need to worry about losing your work again!
+
+Now, let’s connect our local Git repository to GitHub.
+Instructions
+
+1. In your Command Line Interface, make sure your current working directory is your new Git repository. Navigate there if not.
+
+2. Check the status of which files and folders are new or have been edited. There should be no files modified.
+
+$ git status
+
+3. On GitHub, create a new repository by clicking the New repository button on the home page. newRepository
+
+4. On the new repository page, give your repository a name. It’s not necessary, but it would be convenient to name it the same as the directory, git_practice. After naming the repository, click Create repository. createRepository
+
+5. After creating a repository, GitHub displays the repository page. At the top of the page, make sure “HTTPS” is selected. githubHttps
+
+6.The repository is empty, so it’s time to connect it to your existing work. Copy the Git commands on the GitHub page, under the title “…or push an existing repository from the command line”, and paste them into your Command Line Interface. Running these commands will add a remote repository, and then push your local repository to the remote repository.
+
+When asked for a username and password, type in your GitHub username and password and press enter after each. Don’t be alarmed if you can’t see the characters you are typing, they are intentionally hidden as a security measure. githubCommands
+
+Note: If you set up two-factor authentication with GitHub (don’t worry if you didn’t), follow Github’s instructions on creating a personal access (OAuth) token to be used instead of your password in bash. By default, GitHub does not set up two-factor authentication. If you are not familiar with two-factor authentication, you don’t have to generate an OAuth token.
+
+7. Once your Command Line Interface reports that the push is complete, refresh the page on GitHub. You should now see the text you wrote earlier in the README file, “Hello Git and GitHub.”
+
+GitHub automatically displays the contents of a file named README.txt if it exists in the repository. The README file is the perfect place to write a description of your project.
