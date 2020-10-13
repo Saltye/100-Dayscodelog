@@ -1,1 +1,2 @@
 3rd-day installing qtile
+4th day shifting to emac and vim tryin out
